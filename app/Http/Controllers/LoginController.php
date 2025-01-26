@@ -22,4 +22,15 @@ class LoginController extends Controller
             return redirect()->back()->with('gagal','Email atau kata sandi salah');
         }
     }
+
+    public function dashboard()
+    {
+        return view('dashboard.main');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login')->with('berhasil','Berhasil Log Out');
+    }
 }

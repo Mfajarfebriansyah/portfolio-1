@@ -9,5 +9,6 @@
 </head>
 <body>
     @yield('content')
+    <link rel="stylesheet" href="{{asset('bootstrap/js/bootstrap.bundle.min.js')}}">
 </body>
 </html>
