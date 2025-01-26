@@ -7,6 +7,12 @@
     <title>Document</title>
     @vite('resources/css/app.css')
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="{{asset('bootstrap/css/bootstrap.min.css')}}">
+    <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body class="h-full">
 <div class="min-h-full">
@@ -119,15 +125,15 @@
 
     <header class="bg-white shadow-sm">
       <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        @if (session()->has('berhasil'))
-        <div class="alert alert-success" role="alert">
-            {{session('berhasil')}}
-        </div>
+        @if (session()->has("berhasil"))
+            <div class="alert alert-success" role="alert">
+                {{ session('berhasil') }}
+            </div>
         @endif
         @if (session()->has('gagal'))
-        <div class="alert alert-danger" role="alert">
-            {{session('gagal')}}
-        </div>
+            <div class="alert alert-danger" role="alert">
+                {{session('gagal')}}
+            </div>
         @endif
         <h1 class="text-3xl font-bold tracking-tight text-gray-900">Simple Dashboard</h1>
       </div>
@@ -139,5 +145,6 @@
     </main>
   </div>
 
+  <link rel="stylesheet" href="{{asset('bootstrap/js/bootstrap.min.js')}}">
 </body>
 </html>
